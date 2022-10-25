@@ -11,11 +11,12 @@ public class Bounce : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        // Challenge 1: JumpyJumpy(other);
+        // Challenge 1: 
+        JumpyJumpy(other);
     }
 
     void JumpyJumpy(Collider other)
     {
-
+        other.attachedRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Force);
     }
 }
