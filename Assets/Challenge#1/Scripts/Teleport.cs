@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using Random = System.Random;
 
 // GameDev.tv Challenge Club. Got questions or want to share your nifty solution?
 // Head over to - http://community.gamedev.tv
@@ -11,11 +14,16 @@ public class Teleport : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] Light areaLight;
     [SerializeField] Light mainWorldLight;
+    private bool hasBeenUsed = false;
+    [SerializeField] private float timeDelay;
 
     void Start() 
     {
         // CHALLENGE TIP: Make sure all relevant lights are turned off until you need them on
         // because, you know, that would look cool.
+        areaLight.GetComponent<Light>().intensity = 0;
+        mainWorldLight.GetComponent<Light>().intensity = 0;
+
     }
 
     void OnTriggerEnter(Collider other) 
@@ -23,22 +31,31 @@ public class Teleport : MonoBehaviour
         // Challenge 2:
         TeleportPlayer();
         // Challenge 3: DeactivateObject();
-        // Challenge 4: IlluminateArea();
-        // Challenge 5: StartCoroutine ("BlinkWorldLight");
+        // Challenge 4: 
+        IlluminateArea();
+        // Challenge 5:
+       // StartCoroutine ("BlinkWorldLight");
         // Challenge 6: TeleportPlayerRandom();
     }
 
     void TeleportPlayer()
     {
         // code goes here
-        player.transform.position = teleportTarget.transform.position;
-        DeactivateObject();
+        if (!hasBeenUsed)
+        {
+            player.transform.position = teleportTarget.transform.position;
+            StartCoroutine(BlinkWorldLight());
+            hasBeenUsed = true;
+
+        }
     }
 
     void DeactivateObject()
     {
-       // code goes here 
-       this.gameObject.GetComponent<Teleport>().enabled = false;
+        
+        // code goes here 
+        this.gameObject.GetComponent<Teleport>().enabled = false;
+        // why does this not work?
 
 
     }
@@ -46,12 +63,31 @@ public class Teleport : MonoBehaviour
     void IlluminateArea()
     {
        // code goes here 
+       areaLight.GetComponent<Light>().intensity = 8;
     }
 
-    // IEnumerator BlinkWorldLight()
-    // {
-            // code goes here
-    // }
+     IEnumerator BlinkWorldLight()
+     {
+
+            mainWorldLight.GetComponent<Light>().intensity = 1;
+            print("Lights on");
+            timeDelay = .1f;
+            yield return new WaitForSeconds(timeDelay);
+            mainWorldLight.GetComponent<Light>().intensity = 0;
+            print("Lights on");
+            timeDelay = 0.2f;
+            yield return new WaitForSeconds(timeDelay);
+            mainWorldLight.GetComponent<Light>().intensity = 1;
+            print("Lights on");
+            timeDelay = .2f;
+            yield return new WaitForSeconds(timeDelay);
+            mainWorldLight.GetComponent<Light>().intensity = 0;
+            print("Lights on");
+            timeDelay = .1f;
+            yield return new WaitForSeconds(timeDelay);
+        
+
+    }
 
     void TeleportPlayerRandom()
     {
