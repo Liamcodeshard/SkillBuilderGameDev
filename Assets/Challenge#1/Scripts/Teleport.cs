@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 // GameDev.tv Challenge Club. Got questions or want to share your nifty solution?
 // Head over to - http://community.gamedev.tv
@@ -34,6 +34,7 @@ public class Teleport : MonoBehaviour
         // Challenge 4: 
         IlluminateArea();
         // Challenge 5:
+        DeactivateObject();
        // StartCoroutine ("BlinkWorldLight");
         // Challenge 6: TeleportPlayerRandom();
     }
@@ -45,7 +46,7 @@ public class Teleport : MonoBehaviour
         {
             player.transform.position = teleportTarget.transform.position;
             StartCoroutine(BlinkWorldLight());
-            hasBeenUsed = true;
+           // hasBeenUsed = true;
 
         }
     }
@@ -54,8 +55,9 @@ public class Teleport : MonoBehaviour
     {
         
         // code goes here 
-        this.gameObject.GetComponent<Teleport>().enabled = false;
+        this.gameObject.GetComponent<BoxCollider>().enabled = false;
         // why does this not work?
+        
 
 
     }
@@ -71,19 +73,19 @@ public class Teleport : MonoBehaviour
 
             mainWorldLight.GetComponent<Light>().intensity = 1;
             print("Lights on");
-            timeDelay = .1f;
+            timeDelay = Random.Range(0.01f, 0.1f);
             yield return new WaitForSeconds(timeDelay);
             mainWorldLight.GetComponent<Light>().intensity = 0;
             print("Lights on");
-            timeDelay = 0.2f;
+            timeDelay = Random.Range(0.01f, 0.1f);
             yield return new WaitForSeconds(timeDelay);
             mainWorldLight.GetComponent<Light>().intensity = 1;
             print("Lights on");
-            timeDelay = .2f;
+            timeDelay = Random.Range(0.01f, 0.1f);
             yield return new WaitForSeconds(timeDelay);
             mainWorldLight.GetComponent<Light>().intensity = 0;
             print("Lights on");
-            timeDelay = .1f;
+            timeDelay = Random.Range(0.01f, 0.1f);
             yield return new WaitForSeconds(timeDelay);
         
 
