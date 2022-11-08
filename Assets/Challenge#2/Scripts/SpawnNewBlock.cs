@@ -9,9 +9,10 @@ public class SpawnNewBlock : MonoBehaviour
 {
     [SerializeField] GameObject blockPrefab;
     [SerializeField] Transform spawnPosition;
-
     public void SpawnBlock()
     {
-        Instantiate(blockPrefab, spawnPosition.position, Quaternion.identity);
+
+        GameObject newBlock = Instantiate(blockPrefab, spawnPosition.position, Quaternion.identity);
+        newBlock.GetComponent<ColorChanger>().SetRandColour();
     }
 }

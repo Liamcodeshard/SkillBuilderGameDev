@@ -8,35 +8,29 @@ using UnityEngine;
 public class ColorChanger : MonoBehaviour
 {
     private SpriteRenderer mySpriteRenderer;
-    private Color colors;
-    private enum colorChangeEnum
+
+    private Color[] colors = new Color[] { Color.red, Color.yellow, Color.blue };
+    private enum colorOptions
     {
-        blue, red, yellow
+         red = 0, yellow, blue
     }
 
-    [SerializeField] private colorChangeEnum color;
+    [SerializeField] private colorOptions selection;
     void Awake()
     {
-        mySpriteRenderer = GetComponent<SpriteRenderer>();        
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        mySpriteRenderer.color = colors[(int)selection];
     }
 
-    void Start()
+    void Update()
     {
-        switch (color)
-        {
-            case colorChangeEnum.red:
-                colors = Color.red;
-                break;
-            case colorChangeEnum.blue:
-                colors = Color.blue;
-                break;
-            case colorChangeEnum.yellow:
-                colors = Color.yellow;
-                break;
-        }
-        mySpriteRenderer.color = colors;
+
 
     }
 
+    public void SetRandColour()
+    {
+        mySpriteRenderer.color = colors[Random.Range(0, 3)];
+    }
 
 }
