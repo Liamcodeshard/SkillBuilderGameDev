@@ -8,25 +8,33 @@ using UnityEngine;
 public class Hazard : MonoBehaviour
 {
     private GameHandler gameHandler;
+    Color thisColour;
 
     void Start()
     {
         gameHandler = FindObjectOfType<GameHandler>();
+        thisColour = gameObject.GetComponent<SpriteRenderer>().color;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Block"))
         {
-            if (collision.gameObject.GetComponent<BlockMovement>().isActiveBool)
+            Color thatColor = collision.gameObject.GetComponent<SpriteRenderer>().color;
+                
+            if (thatColor != thisColour)
             {
-                Destroy(collision.gameObject);
-                gameHandler.AllPlayerBlocksArrayUpdate();
-                gameHandler.DestroyedBlockUpdate();
-            }
-            else
-            {
-                Destroy(collision.gameObject);
+
+                if (collision.gameObject.GetComponent<BlockMovement>().isActiveBool)
+                {
+                    Destroy(collision.gameObject);
+                    gameHandler.AllPlayerBlocksArrayUpdate();
+                    gameHandler.DestroyedBlockUpdate();
+                }
+                else
+                {
+                    Destroy(collision.gameObject);
+                }
             }
         }
     }

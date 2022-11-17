@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e055227fdd4bb94f90f4aa67ceaeff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 0
+  selection: 1
 --- !u!212 &402648193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2673,6 +2673,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5474496776418543824, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
+      propertyPath: selection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474496776418543824, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
       propertyPath: colorChoice.a
       value: 1
       objectReference: {fileID: 0}
@@ -2759,6 +2763,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: isBlue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
+      propertyPath: selection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
@@ -5549,6 +5557,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5474496776418543824, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
+      propertyPath: selection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474496776418543824, guid: 9f25cd7f48d23004cbac9e7d9f56805b, type: 3}
       propertyPath: colorChoice.b
       value: 0
       objectReference: {fileID: 0}
@@ -6010,7 +6022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e055227fdd4bb94f90f4aa67ceaeff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 0
+  selection: 2
 --- !u!4 &1744052871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 82358166877800182, guid: 63ec7df1189b1d445aabf9b057f51b91, type: 3}
@@ -6416,6 +6428,10 @@ PrefabInstance:
     - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: isBlue
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
+      propertyPath: selection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2039809777333422715, guid: 7c9baa423b17db549af1430f2e53672e, type: 3}
       propertyPath: colorChoice.a
