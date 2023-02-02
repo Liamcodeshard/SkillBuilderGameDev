@@ -17,6 +17,8 @@ public class Gates : MonoBehaviour
     {
         if (!triggered)
         {
+            rightGate.material.color = Color.yellow;
+            leftGate.material.color = Color.yellow;
             TriggerCheckpoint();
             triggered = true;
         }
@@ -25,7 +27,10 @@ public class Gates : MonoBehaviour
     
     static void TriggerCheckpoint()
     {
-        gatesLeft--;
+        if(gatesLeft > 0)
+        {
+            gatesLeft--;
+        }
         print("gates left: " + gatesLeft.ToString());
     }
 }
