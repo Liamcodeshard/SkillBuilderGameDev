@@ -9,9 +9,9 @@ public class HealthScript : MonoBehaviour
     [SerializeField] private int carHealth = 2;
     public TextMeshProUGUI livesText;
 
-    public void TakeHealth()
+    public void TakeHealth(int damage)
     {
-        carHealth--;
+        carHealth-= damage;
     }
     public void GiveHealth()
     {
@@ -37,6 +37,7 @@ public class HealthScript : MonoBehaviour
             GateManager.timer = 0;
             Gates.gatesLeft = GateManager.gateBrains.Length;
             Gates.firstGate = true;
+            Gates.racing = false;
 
         }
 

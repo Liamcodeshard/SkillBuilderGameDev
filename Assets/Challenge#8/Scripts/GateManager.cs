@@ -11,6 +11,11 @@ public class GateManager : MonoBehaviour
     [SerializeField] private ParticleSystem winningParticle;
     public static float timer =0;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshProUGUI fastestLapText;
+
+
+    private float highScoreLevelOne;
+    public bool resetScore = false;
 
 
     // Start is called before the first frame update
@@ -18,6 +23,10 @@ public class GateManager : MonoBehaviour
     {
         gateBrains = GameObject.FindGameObjectsWithTag("GateBrain");
         Gates.gatesLeft = gateBrains.Length;
+        fastestLapText.text = "Fastest Lap : " + PlayerPrefs.GetFloat("FastestLevelOneLap").ToString();
+        if (resetScore) PlayerPrefs.SetFloat("FastestLevelOneLap", 100f);
+
+
     }
 
     // Update is called once per frame
@@ -32,11 +41,29 @@ public class GateManager : MonoBehaviour
         if (Gates.gatesLeft <= 0)
         {
             Gates.racing = false;
+            highScoreLevelOne = timer;
+            timerText.text = highScoreLevelOne.ToString();
             winningParticle.gameObject.SetActive(true);
+
+            CheckAndSetHighScore(highScoreLevelOne);
             Invoke("ReloadScene", 3);
             
 
         }
+    }
+
+    void CheckAndSetHighScore(float newTime)
+    {
+
+        if (highScoreLevelOne < PlayerPrefs.GetFloat("FastestLevelOneLap"))
+        {
+            PlayerPrefs.SetFloat("FastestLevelOneLap", highScoreLevelOne);
+            print(PlayerPrefs.GetFloat("FastestLevelOneLap"));
+        }
+
+
+        fastestLapText.text = "Fastest Lap : " + PlayerPrefs.GetFloat("FastestLevelOneLap").ToString();
+
     }
     public void ReloadScene()
     {
@@ -52,6 +79,6 @@ public class GateManager : MonoBehaviour
 
     void UpdateTimerUI()
     {
-        timerText.text = timer.ToString();
+        timerText.text = "LapTime: " + timer.ToString();
     }
 }
