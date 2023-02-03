@@ -34,6 +34,10 @@ public class HealthScript : MonoBehaviour
         {
             livesText.text = "You Deadddd";
             Invoke("ReloadScene", 3);
+            GateManager.timer = 0;
+            Gates.gatesLeft = GateManager.gateBrains.Length;
+            Gates.firstGate = true;
+
         }
 
     }

@@ -9,8 +9,11 @@ public class Gates : MonoBehaviour
 {
     [SerializeField] MeshRenderer leftGate;
     [SerializeField] MeshRenderer rightGate;
+    [SerializeField] private ParticleSystem gateParticles;
 
-    private static int gatesLeft = 2;
+    public static int gatesLeft = 2;
+    public static bool firstGate = true;
+    public static bool racing = false;
     private bool triggered = false;
 
     void OnTriggerEnter(Collider other)
@@ -20,6 +23,7 @@ public class Gates : MonoBehaviour
             rightGate.material.color = Color.yellow;
             leftGate.material.color = Color.yellow;
             TriggerCheckpoint();
+            gateParticles.gameObject.SetActive(true);
             triggered = true;
         }
 
@@ -31,6 +35,11 @@ public class Gates : MonoBehaviour
         {
             gatesLeft--;
         }
-        print("gates left: " + gatesLeft.ToString());
+
+        if (firstGate)
+        {
+            firstGate = false;
+            racing = true;
+        }
     }
 }

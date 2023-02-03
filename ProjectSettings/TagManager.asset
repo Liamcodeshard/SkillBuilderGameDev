@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Block
   - Gem
+  - GateBrain
   layers:
   - Default
   - TransparentFX
