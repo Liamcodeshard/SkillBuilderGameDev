@@ -11417,7 +11417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &769307999
 Transform:
   m_ObjectHideFlags: 0
@@ -13624,7 +13624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.07811105, y: -0, z: -0, w: 0.99694467}
-  m_LocalPosition: {x: 40.498062, y: 27.685856, z: -95.650154}
+  m_LocalPosition: {x: 40.572086, y: 27.685856, z: -95.650154}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27941,7 +27941,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414485343}
   m_LocalRotation: {x: 0.07811105, y: 0, z: 0, w: 0.99694467}
-  m_LocalPosition: {x: 40.498062, y: 27.685856, z: -95.650154}
+  m_LocalPosition: {x: 40.572086, y: 27.685856, z: -95.650154}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -54856,8 +54856,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3475528747524640793, guid: 79004f8777d25344d9c78287c5173943, type: 3}
+      propertyPath: turnSpeed
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3475528747524640793, guid: 79004f8777d25344d9c78287c5173943, type: 3}
       propertyPath: forwardSpeed
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3475528747524640793, guid: 79004f8777d25344d9c78287c5173943, type: 3}
       propertyPath: turboLayers.m_Bits
