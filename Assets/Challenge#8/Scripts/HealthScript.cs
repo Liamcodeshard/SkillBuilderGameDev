@@ -8,6 +8,13 @@ public class HealthScript : MonoBehaviour
 {
     [SerializeField] private int carHealth = 2;
     public TextMeshProUGUI livesText;
+    [SerializeField] public ParticleSystem brokenSmoke;
+
+    void Start()
+    {
+        brokenSmoke.gameObject.SetActive(false);
+    }
+
 
     public void TakeHealth(int damage)
     {

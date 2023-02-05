@@ -7375,7 +7375,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 601784033}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 212.349, y: 0, z: 0}
 --- !u!199 &323126366
 ParticleSystemRenderer:
@@ -13165,19 +13165,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!114 &394312684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394312682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe4fc2f3ed129e9459114ffd6aac09e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
 --- !u!1001 &397276452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15918,7 +15905,7 @@ GameObject:
   - component: {fileID: 710493370}
   m_Layer: 0
   m_Name: BrokenSmoke
-  m_TagString: Untagged
+  m_TagString: BrokenSmoke
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15936,7 +15923,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 601784033}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 297.144, y: 0, z: 0}
 --- !u!199 &710493370
 ParticleSystemRenderer:
@@ -20945,6 +20932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carHealth: 6
   livesText: {fileID: 1704947704}
+  brokenSmoke: {fileID: 710493371}
 --- !u!1 &734197678 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1250922492522612, guid: 517a8607e4b54054b9216e69695d6e53, type: 3}
@@ -37496,7 +37484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1b09b9aca4ebd4c842fcd25f9e7527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeTimer: 0
+  shakeTimer: 0.00001
 --- !u!1 &1414662815 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1951616312640556, guid: 6e0dbb46da4c95f46ab24246940cf6f6, type: 3}
