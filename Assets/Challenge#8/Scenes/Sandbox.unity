@@ -29485,6 +29485,7 @@ GameObject:
   - component: {fileID: 1096623552}
   - component: {fileID: 1096623555}
   - component: {fileID: 1096623556}
+  - component: {fileID: 1096623557}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -29562,6 +29563,23 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!114 &1096623557
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096623551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 5
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1104269820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1250922492522612, guid: 517a8607e4b54054b9216e69695d6e53, type: 3}
@@ -37404,6 +37422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414485345}
   - component: {fileID: 1414485344}
+  - component: {fileID: 1414485346}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -37465,6 +37484,19 @@ Transform:
   m_Father: {fileID: 2079646760}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 8.96, y: 0, z: 0}
+--- !u!114 &1414485346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414485343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1b09b9aca4ebd4c842fcd25f9e7527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeTimer: 0
 --- !u!1 &1414662815 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1951616312640556, guid: 6e0dbb46da4c95f46ab24246940cf6f6, type: 3}
