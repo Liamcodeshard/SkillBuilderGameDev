@@ -23,7 +23,7 @@ public class GateManager : MonoBehaviour
     {
         gateBrains = GameObject.FindGameObjectsWithTag("GateBrain");
         Gates.gatesLeft = gateBrains.Length;
-        fastestLapText.text = "Fastest Lap : " + PlayerPrefs.GetFloat("FastestLevelOneLap").ToString();
+        fastestLapText.text = "Fastest Lap :" + PlayerPrefs.GetFloat("FastestLevelOneLap").ToString();
         if (resetScore) PlayerPrefs.SetFloat("FastestLevelOneLap", 100f);
 
 
