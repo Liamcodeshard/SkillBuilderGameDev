@@ -20,7 +20,6 @@ public class ObstacleScript : MonoBehaviour
             col.gameObject.GetComponent<HealthScript>().brokenSmoke.gameObject.SetActive(true);
             col.gameObject.GetComponent<HealthScript>().TakeHealth(damage);
             CinemachineShaker.Instance.ShakeCamera(2, .2f);
-            CinemachineShaker.Instance.shakeTimer = 0.2f;
             carControllerScript.SlowCar();
         }
     }

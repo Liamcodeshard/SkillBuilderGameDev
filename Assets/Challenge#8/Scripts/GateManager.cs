@@ -44,7 +44,6 @@ public class GateManager : MonoBehaviour
             highScoreLevelOne = timer;
             timerText.text = highScoreLevelOne.ToString();
             winningParticle.gameObject.SetActive(true);
-            CinemachineShaker.Instance.shakeTimer = 3;
             CinemachineShaker.Instance.ShakeCamera(4, 3);
 
             CheckAndSetHighScore(highScoreLevelOne);
