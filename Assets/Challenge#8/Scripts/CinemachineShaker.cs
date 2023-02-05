@@ -18,7 +18,6 @@ public class CinemachineShaker : MonoBehaviour
 
     public void ShakeCamera(float intensity, float time)
     {
-        print("Shake");
         CinemachineBasicMultiChannelPerlin cinemachnBasicMultiChannelPerlin =
             cinemachineVirtualCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
@@ -29,7 +28,7 @@ public class CinemachineShaker : MonoBehaviour
     private void Update()
     {
         if (shakeTimer > 0)
-        { 
+        {
             shakeTimer -= Time.deltaTime;
             if (shakeTimer <= 0)
             {

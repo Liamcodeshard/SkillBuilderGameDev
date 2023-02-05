@@ -8,7 +8,7 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     [SerializeField] Rigidbody sphereRigidbody;
-    [SerializeField] float forwardSpeed;
+    [SerializeField] public float forwardSpeed;
     [SerializeField] float reverseSpeed;
     [SerializeField] float turnSpeed;
     [SerializeField] float distanceCheck = .2f;
@@ -24,6 +24,11 @@ public class CarController : MonoBehaviour
     {
         // this simply is making sure we don't have issues with the car body following the sphere
         sphereRigidbody.transform.parent = null;
+    }
+
+    public void SlowCar()
+    {
+        forwardSpeed *= 0.9f;
     }
 
     void FixedUpdate()
@@ -72,7 +77,7 @@ public class CarController : MonoBehaviour
     void MoveCarBodyWithSphere()
     {
         // With your car game object, be sure that the car body and sphere start in exactly the same position
-        // or else things go wrong pretty quickly. The next line is making the car body follow the sehere.
+        // or else things go wrong pretty quickly. The next line is making the car body follow the sphere.
         transform.position = sphereRigidbody.transform.position;
     }
 
