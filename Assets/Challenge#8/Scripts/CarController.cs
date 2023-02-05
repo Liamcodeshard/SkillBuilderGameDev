@@ -28,7 +28,7 @@ public class CarController : MonoBehaviour
 
     public void SlowCar()
     {
-        forwardSpeed *= 0.8f;
+        forwardSpeed *= 0.9f;
     }
 
     void FixedUpdate()
