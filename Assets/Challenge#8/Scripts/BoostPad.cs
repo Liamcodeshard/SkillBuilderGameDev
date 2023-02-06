@@ -12,7 +12,6 @@ public class BoostPad : MonoBehaviour
     {
         rb = other.GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * boostAmount, ForceMode.Acceleration);
-        print("ForceAdded");
     }
 
 

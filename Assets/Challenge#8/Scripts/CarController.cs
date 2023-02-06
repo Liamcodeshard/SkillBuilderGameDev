@@ -84,14 +84,6 @@ public class CarController : MonoBehaviour
     void CheckIfGrounded()
     {
         isGrounded = Physics.CheckSphere(transform.position, distanceCheck, groundLayers, QueryTriggerInteraction.Ignore);
-        if (isGrounded)
-        {
-            print("I am grounded, yo");
-        }
-        else
-        {
-            print("well, well, it appears I'm not touching what I believe to be the ground, dude");
-        }
     }
 
 }
