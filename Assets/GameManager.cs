@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
     public static bool racing = false;
     private bool paused = false;
+
+    public CinemachineVirtualCamera fpsCam;
+    public CinemachineVirtualCamera thirdPersonCam;
+    public CinemachineVirtualCamera godViewCam;
+
 
     public static GameManager instance;
     // Start is called before the first frame update
@@ -19,8 +25,24 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            fpsCam.gameObject.SetActive(false);
+            fpsCam.gameObject.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            thirdPersonCam.gameObject.SetActive(false);
+            thirdPersonCam.gameObject.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            godViewCam.gameObject.SetActive(false);
+            godViewCam.gameObject.SetActive(true);
+        }
     }
+
+
 
     public void RaceToggle()
     {
@@ -55,4 +77,5 @@ public class GameManager : MonoBehaviour
         if (paused) Time.timeScale = 0f;
         else Time.timeScale = 1f;
     }
+
 }
