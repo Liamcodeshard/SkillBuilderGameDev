@@ -13,7 +13,7 @@ public class Gates : MonoBehaviour
 
     public static int gatesLeft = 2;
     public static bool firstGate = true;
-    public static bool racing = false;
+    //public static bool racing = false;
     private bool triggered = false;
 
     void OnTriggerEnter(Collider other)
@@ -39,7 +39,7 @@ public class Gates : MonoBehaviour
         if (firstGate)
         {
             firstGate = false;
-            racing = true;
+            GameManager.racing = true;
         }
     }
 }

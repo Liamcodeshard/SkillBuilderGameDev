@@ -53,7 +53,7 @@ public class HealthScript : MonoBehaviour
             GateManager.timer = 0;
             Gates.gatesLeft = GateManager.gateBrains.Length;
             Gates.firstGate = true;
-            Gates.racing = false;
+            GameManager.racing = false;
 
         }
 

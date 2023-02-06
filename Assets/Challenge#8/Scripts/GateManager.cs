@@ -33,14 +33,14 @@ public class GateManager : MonoBehaviour
     void Update()
     {
 
-        if (Gates.racing == true)
+        if (GameManager.racing == true)
         {
             StartTimer();
         }
         UpdateTimerUI();
         if (Gates.gatesLeft <= 0)
         {
-            Gates.racing = false;
+            GameManager.racing = false;
             highScoreLevelOne = timer;
             timerText.text = highScoreLevelOne.ToString("0.00");
             winningParticle.gameObject.SetActive(true);
