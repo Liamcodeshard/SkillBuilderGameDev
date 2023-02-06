@@ -23,7 +23,7 @@ public class GateManager : MonoBehaviour
     {
         gateBrains = GameObject.FindGameObjectsWithTag("GateBrain");
         Gates.gatesLeft = gateBrains.Length;
-        fastestLapText.text = "Fastest Lap :" + PlayerPrefs.GetFloat("FastestLevelOneLap").ToString();
+        fastestLapText.text = "Fastest Lap :" + PlayerPrefs.GetFloat("FastestLevelOneLap").ToString("0.00");
         if (resetScore) PlayerPrefs.SetFloat("FastestLevelOneLap", 100f);
 
 
@@ -42,7 +42,7 @@ public class GateManager : MonoBehaviour
         {
             Gates.racing = false;
             highScoreLevelOne = timer;
-            timerText.text = highScoreLevelOne.ToString();
+            timerText.text = highScoreLevelOne.ToString("0.00");
             winningParticle.gameObject.SetActive(true);
             CinemachineShaker.Instance.ShakeCamera(4, 3);
 
@@ -62,7 +62,7 @@ public class GateManager : MonoBehaviour
         }
 
 
-        fastestLapText.text = "Fastest Lap : " + PlayerPrefs.GetFloat("FastestLevelOneLap").ToString();
+        fastestLapText.text = "Fastest Lap : " + PlayerPrefs.GetFloat("FastestLevelOneLap").ToString("0.00");
 
     }
     public void ReloadScene()
@@ -79,6 +79,6 @@ public class GateManager : MonoBehaviour
 
     void UpdateTimerUI()
     {
-        timerText.text = "LapTime: " + timer.ToString();
+        timerText.text = "LapTime: " + timer.ToString("0.00");
     }
 }
