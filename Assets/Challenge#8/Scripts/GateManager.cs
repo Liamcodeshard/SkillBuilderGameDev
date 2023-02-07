@@ -12,7 +12,9 @@ public class GateManager : MonoBehaviour
     public static float timer =0;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI fastestLapText;
-    [SerializeField] private TextMeshProUGUI boardTimer;
+    [SerializeField] private TextMeshProUGUI boardTimer1 = null;
+    [SerializeField] private TextMeshProUGUI boardTimer2 = null;
+
 
 
 
@@ -64,7 +66,7 @@ public class GateManager : MonoBehaviour
         }
 
 
-        fastestLapText.text = "Fastest Lap : " + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
+        fastestLapText.text = "Speed Lap : " + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
 
     }
     public void ReloadScene()
@@ -82,7 +84,11 @@ public class GateManager : MonoBehaviour
     void UpdateTimerUI()
     {
         timerText.text = "LapTime: " + timer.ToString("0.00");
-        boardTimer.text = "LapTime: " + timer.ToString("0.00");
+        if (boardTimer1 != null && boardTimer2 != null)
+        {
+            boardTimer1.text = "LapTime: " + timer.ToString("0.00");
+            boardTimer2.text = "LapTime: " + timer.ToString("0.00");
+        }
 
     }
 }
