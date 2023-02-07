@@ -86,8 +86,8 @@ public class GateManager : MonoBehaviour
         timerText.text = "LapTime: " + timer.ToString("0.00");
         if (boardTimer1 != null && boardTimer2 != null)
         {
-            boardTimer1.text = "LapTime: " + timer.ToString("0.00");
-            boardTimer2.text = "LapTime: " + timer.ToString("0.00");
+            boardTimer1.text = timer.ToString("0.00");
+            boardTimer2.text = timer.ToString("0.00");
         }
 
     }

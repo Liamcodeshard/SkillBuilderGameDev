@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(racing);
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             fpsCam.gameObject.SetActive(false);

@@ -21,6 +21,7 @@ public class Gates : MonoBehaviour
         if (other.tag == "Player")
         {
             if (!triggered)
+                print("Triggered");
             {
                 rightGate.material.color = Color.yellow;
                 leftGate.material.color = Color.yellow;
