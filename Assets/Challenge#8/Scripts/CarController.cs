@@ -59,6 +59,7 @@ public class CarController : MonoBehaviour
         moveInput = Input.GetAxisRaw("Vertical");
         if (moveInput > 0)
         {
+            print("gOTaXISvERT!");
             moveInput *= forwardSpeed;
         }
         else
@@ -70,6 +71,8 @@ public class CarController : MonoBehaviour
     void TurnVehicle()
     {
         turnInput = Input.GetAxisRaw("Horizontal");
+        print("gOTaXIShORIZON!");
+
         float newRotation = turnInput * turnSpeed * Time.deltaTime;
         transform.Rotate(0, newRotation, 0, Space.World);
     }

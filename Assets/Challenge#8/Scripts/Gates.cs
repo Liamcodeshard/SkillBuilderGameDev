@@ -18,13 +18,16 @@ public class Gates : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!triggered)
+        if (other.tag == "Player")
         {
-            rightGate.material.color = Color.yellow;
-            leftGate.material.color = Color.yellow;
-            TriggerCheckpoint();
-            gateParticles.gameObject.SetActive(true);
-            triggered = true;
+            if (!triggered)
+            {
+                rightGate.material.color = Color.yellow;
+                leftGate.material.color = Color.yellow;
+                TriggerCheckpoint();
+                gateParticles.gameObject.SetActive(true);
+                triggered = true;
+            }
         }
 
     }
