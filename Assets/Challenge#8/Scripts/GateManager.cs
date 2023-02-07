@@ -67,7 +67,7 @@ public class GateManager : MonoBehaviour
     }
     public void ReloadScene()
     {
-        SceneManager.LoadScene("Sandbox");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         timer = 0;
         Gates.gatesLeft = gateBrains.Length;
         Gates.firstGate = true;

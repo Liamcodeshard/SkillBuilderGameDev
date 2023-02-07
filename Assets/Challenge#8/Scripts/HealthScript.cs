@@ -12,9 +12,25 @@ public class HealthScript : MonoBehaviour
     [SerializeField] public ParticleSystem brokenSmoke;
     private int emissionRate= 0;
 
+    // to show sparks when crashing
+    [SerializeField]
+    ParticleSystem bounceParticleSystem;
+
+    [SerializeField]
+    int bounceParticleEmission = 20;
+
     void Start()
     {
         var emission = brokenSmoke.emission;
+    }
+
+    void EmitBounceParticles(float x, float z, float rotation)
+    {
+        ParticleSystem.ShapeModule shape = bounceParticleSystem.shape;
+        shape.position = new Vector3(x, 0f, z);
+        shape.rotation = new Vector3(0f, rotation, 0f);
+        bounceParticleSystem.Emit(bounceParticleEmission);
+        print("Bounce");
     }
 
 
@@ -31,11 +47,11 @@ public class HealthScript : MonoBehaviour
 
     void ReloadScene()
     {
-        SceneManager.LoadScene("Sandbox");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void Update()
-    {        
+    {       
 
         if (carHealth > 0)
         {        
