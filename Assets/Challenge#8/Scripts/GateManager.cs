@@ -12,6 +12,8 @@ public class GateManager : MonoBehaviour
     public static float timer =0;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private TextMeshProUGUI fastestLapText;
+    [SerializeField] private TextMeshProUGUI boardTimer;
+
 
 
     private float highScoreLevelOne;
@@ -23,8 +25,8 @@ public class GateManager : MonoBehaviour
     {
         gateBrains = GameObject.FindGameObjectsWithTag("GateBrain");
         Gates.gatesLeft = gateBrains.Length;
-        fastestLapText.text = "Fastest Lap :" + PlayerPrefs.GetFloat("FastestLevelOneLap").ToString("0.00");
-        if (resetScore) PlayerPrefs.SetFloat("FastestLevelOneLap", 100f);
+        fastestLapText.text = "Fastest Lap :" + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
+        if (resetScore) PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", 100f);
 
 
     }
@@ -56,18 +58,18 @@ public class GateManager : MonoBehaviour
     void CheckAndSetHighScore(float newTime)
     {
 
-        if (highScoreLevelOne < PlayerPrefs.GetFloat("FastestLevelOneLap"))
+        if (highScoreLevelOne < PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap"))
         {
-            PlayerPrefs.SetFloat("FastestLevelOneLap", highScoreLevelOne);
+            PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", highScoreLevelOne);
         }
 
 
-        fastestLapText.text = "Fastest Lap : " + PlayerPrefs.GetFloat("FastestLevelOneLap").ToString("0.00");
+        fastestLapText.text = "Fastest Lap : " + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
 
     }
     public void ReloadScene()
     {
-        SceneManager.LoadScene("Sandbox");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         timer = 0;
         Gates.gatesLeft = gateBrains.Length;
         Gates.firstGate = true;
@@ -80,5 +82,7 @@ public class GateManager : MonoBehaviour
     void UpdateTimerUI()
     {
         timerText.text = "LapTime: " + timer.ToString("0.00");
+        boardTimer.text = "LapTime: " + timer.ToString("0.00");
+
     }
 }
