@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class FinishLine : MonoBehaviour 
 {
-    [SerializeField] private GameObject _startVisual, _finishedVisual;
+   // [SerializeField] private GameObject _startVisual, _finishedVisual;
 
     public static event Action<bool> Crossed;
 
@@ -11,33 +11,42 @@ public class FinishLine : MonoBehaviour
 
     private void Awake() 
     {
-        _startVisual.SetActive(true);
-        _finishedVisual.SetActive(false);
+      //  _startVisual.SetActive(true);
+      //  _finishedVisual.SetActive(false);
     }
 
+
+    // what do these do?
     private void OnEnable() => Goal.OnGoalTriggered += GoalOnOnGoalTriggered;
     private void OnDisable() => Goal.OnGoalTriggered -= GoalOnOnGoalTriggered;
 
     private void GoalOnOnGoalTriggered() 
     {
-        _finishedVisual.SetActive(true);
+       // _finishedVisual.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider col) 
     {
-        if (_running && !_finishedVisual.activeSelf) return;
-        
-        if(col.gameObject.tag =="Player")
+        // if (_running && !_finishedVisual.activeSelf) return;
+
+        if (col.tag == "Player" && this.tag == "Start")
         {
-            _running = !_running;
-            _startVisual.SetActive(false);
-            _finishedVisual.SetActive(false);
+            _running = true;
+            //  _startVisual.SetActive(false);
+            // _finishedVisual.SetActive(false);
+            Crossed?.Invoke(_running);
+        }
+        if (col.tag == "Player" && this.tag == "Finish")
+        {
+            _running = false;
+            //  _startVisual.SetActive(false);
+            // _finishedVisual.SetActive(false);
             Crossed?.Invoke(_running);
         }
     }
 
     private void OnTriggerExit(Collider col) 
     {
-        _startVisual.SetActive(!_running);
+       // _startVisual.SetActive(!_running);
     }
 }
