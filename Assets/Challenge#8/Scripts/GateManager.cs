@@ -48,10 +48,10 @@ public class GateManager : MonoBehaviour
             highScoreLevelOne = timer;
             timerText.text = highScoreLevelOne.ToString("0.00");
             winningParticle.gameObject.SetActive(true);
-            CinemachineShaker.Instance.ShakeCamera(4, 3);
+           // CinemachineShaker.Instance.ShakeCamera(4, 3);
 
             CheckAndSetHighScore(highScoreLevelOne);
-            Invoke("ReloadScene", 3);
+           // Invoke("ReloadScene", 3);
             
 
         }
