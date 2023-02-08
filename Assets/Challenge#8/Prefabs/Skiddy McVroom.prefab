@@ -10189,6 +10189,8 @@ MonoBehaviour:
   carHealth: 3
   livesText: {fileID: 0}
   brokenSmoke: {fileID: 710493371}
+  bounceParticleSystem: {fileID: 0}
+  bounceParticleEmission: 20
 --- !u!1 &3475528747524640794
 GameObject:
   m_ObjectHideFlags: 0
