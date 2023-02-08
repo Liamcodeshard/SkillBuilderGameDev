@@ -16,9 +16,9 @@ public class FinishLine : MonoBehaviour
     }
 
 
-    // what do these do?
-    private void OnEnable() => Goal.OnGoalTriggered += GoalOnOnGoalTriggered;
-    private void OnDisable() => Goal.OnGoalTriggered -= GoalOnOnGoalTriggered;
+    // what do these do? set the waypoint on and off
+   // private void OnEnable() => Goal.OnGoalTriggered += GoalOnOnGoalTriggered;
+   // private void OnDisable() => Goal.OnGoalTriggered -= GoalOnOnGoalTriggered;
 
     private void GoalOnOnGoalTriggered() 
     {
