@@ -13,7 +13,8 @@ public class GhostRunner : MonoBehaviour {
     private void OnEnable() => FinishLine.Crossed += OnFinishLineCrossed;
     private void OnDisable() => FinishLine.Crossed -= OnFinishLineCrossed;
     
-    private void OnFinishLineCrossed(bool runStarting) {
+    private void OnFinishLineCrossed(bool runStarting) 
+    {
         if (runStarting) {
             _system.StartRun(_recordTarget, _captureEveryNFrames);
             _system.PlayRecording(RecordingType.Best, Instantiate(_ghostPrefab));
