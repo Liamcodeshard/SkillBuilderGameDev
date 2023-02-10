@@ -27,6 +27,7 @@ public class GateManager : MonoBehaviour
     {
         gateBrains = GameObject.FindGameObjectsWithTag("GateBrain");
         Gates.gatesLeft = gateBrains.Length;
+        print(gateBrains.Length);
         fastestLapText.text = "Fastest Lap :" + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
         if (resetScore) PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", 100f);
 
@@ -42,6 +43,7 @@ public class GateManager : MonoBehaviour
             StartTimer();
         }
         UpdateTimerUI();
+        print(Gates.gatesLeft);
         if (Gates.gatesLeft <= 0)
         {
             GameManager.racing = false;
@@ -51,8 +53,11 @@ public class GateManager : MonoBehaviour
            // CinemachineShaker.Instance.ShakeCamera(4, 3);
 
             CheckAndSetHighScore(highScoreLevelOne);
-           // Invoke("ReloadScene", 3);
-            
+
+            // Invoke("ReloadScene", 3);
+            Invoke("ResetLap", .5f);
+
+
 
         }
     }
@@ -68,6 +73,13 @@ public class GateManager : MonoBehaviour
 
         fastestLapText.text = "Speed Lap : " + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
 
+    }
+
+    void ResetLap()
+    {
+        timer = 0;
+        Gates.gatesLeft = gateBrains.Length;
+        Gates.firstGate = true;
     }
     public void ReloadScene()
     {

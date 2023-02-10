@@ -9,6 +9,8 @@ TagManager:
   - GateBrain
   - BrokenSmoke
   - Start
+  - Health
+  - Time
   layers:
   - Default
   - TransparentFX

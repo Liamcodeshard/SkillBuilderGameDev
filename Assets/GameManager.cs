@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public CinemachineVirtualCamera thirdPersonCam;
     public CinemachineVirtualCamera godViewCam;
 
-
     public static GameManager instance;
     // Start is called before the first frame update
     void Start()
@@ -47,6 +46,10 @@ public class GameManager : MonoBehaviour
     public void RaceToggle()
     {
         racing = !racing;
+    }
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ReplayCurrentScene()
