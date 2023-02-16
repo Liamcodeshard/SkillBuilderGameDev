@@ -12086,6 +12086,7 @@ MonoBehaviour:
   leftGate: {fileID: 225876338}
   rightGate: {fileID: 1681281936}
   gateParticles: {fileID: 1420549997}
+  triggered: 0
 --- !u!65 &684696576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14525,6 +14526,7 @@ MonoBehaviour:
   leftGate: {fileID: 1015231024}
   rightGate: {fileID: 1149238102}
   gateParticles: {fileID: 1274026827}
+  triggered: 0
 --- !u!65 &908828208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22035,6 +22037,7 @@ MonoBehaviour:
   leftGate: {fileID: 772827138}
   rightGate: {fileID: 2113981739}
   gateParticles: {fileID: 1416305254}
+  triggered: 0
 --- !u!65 &1110131275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23405,6 +23408,7 @@ MonoBehaviour:
   leftGate: {fileID: 1969474077}
   rightGate: {fileID: 43432114}
   gateParticles: {fileID: 125958490}
+  triggered: 0
 --- !u!65 &1188397911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47365,6 +47369,7 @@ MonoBehaviour:
   leftGate: {fileID: 1036646817}
   rightGate: {fileID: 971362436}
   gateParticles: {fileID: 975962956}
+  triggered: 0
 --- !u!65 &1645979819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47796,6 +47801,7 @@ MonoBehaviour:
   leftGate: {fileID: 1859552331}
   rightGate: {fileID: 1003690127}
   gateParticles: {fileID: 1543578598}
+  triggered: 0
 --- !u!65 &1686926929
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48519,11 +48525,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704947702}
   m_CullTransparentMesh: 1
---- !u!1 &1708162557 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3475528747524640794, guid: 79004f8777d25344d9c78287c5173943, type: 3}
-  m_PrefabInstance: {fileID: 3475528746696645383}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1723771367 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1250922492522612, guid: 517a8607e4b54054b9216e69695d6e53, type: 3}
@@ -50856,18 +50857,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3475528747524640792, guid: 79004f8777d25344d9c78287c5173943, type: 3}
   m_PrefabInstance: {fileID: 3475528746696645383}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1935559457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708162557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee7cf3f33e611d443b1491965b15ef7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1941806802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56897,7 +56886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2072614301
 RectTransform:
   m_ObjectHideFlags: 0

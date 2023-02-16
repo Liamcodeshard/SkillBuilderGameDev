@@ -14,7 +14,7 @@ public class Gates : MonoBehaviour
     public static int gatesLeft;
     public static bool firstGate = true;
     //public static bool racing = false;
-    private bool triggered = false;
+    public bool triggered = false;
 
     void OnTriggerEnter(Collider other)
     {

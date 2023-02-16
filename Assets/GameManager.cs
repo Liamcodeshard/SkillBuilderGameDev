@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
+        ResetRace();
     }
 
     // Update is called once per frame

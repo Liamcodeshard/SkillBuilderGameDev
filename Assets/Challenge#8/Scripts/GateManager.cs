@@ -55,7 +55,7 @@ public class GateManager : MonoBehaviour
             CheckAndSetHighScore(highScoreLevelOne);
 
             // Invoke("ReloadScene", 3);
-            Invoke("ResetLap", .5f);
+            Invoke("ResetLap", 1f);
 
 
 
@@ -80,6 +80,12 @@ public class GateManager : MonoBehaviour
         timer = 0;
         Gates.gatesLeft = gateBrains.Length;
         Gates.firstGate = true;
+
+        // set the gates triggered back to false
+        foreach (GameObject gateBrain in gateBrains)
+        {
+            gateBrain.GetComponent<Gates>().triggered = false;
+        }
     }
     public void ReloadScene()
     {
