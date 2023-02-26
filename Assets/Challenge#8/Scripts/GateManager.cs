@@ -19,7 +19,7 @@ public class GateManager : MonoBehaviour
 
 
     private float highScoreLevelOne;
-    public bool resetScore = false;
+    public bool resetSpeedLapTime = false;
 
 
     // Start is called before the first frame update
@@ -29,7 +29,7 @@ public class GateManager : MonoBehaviour
         Gates.gatesLeft = gateBrains.Length;
         print(gateBrains.Length);
         fastestLapText.text = "Fastest Lap :" + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
-        if (resetScore) PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", 100f);
+        if (resetSpeedLapTime) PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", 100f);
 
 
     }
