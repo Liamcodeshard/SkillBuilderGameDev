@@ -66,8 +66,7 @@ public class HealthScript : MonoBehaviour
             emission.rateOverTime = 200;
             livesText.text = "You Deadddd";
             Invoke("ReloadScene", 3);
-            GateManager.timer = 0;
-            Gates.gatesLeft = GateManager.gateBrains.Length;
+            GameManager.timer = 0;
             Gates.firstGate = true;
             GameManager.racing = false;
 

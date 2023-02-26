@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db62f4139835c04996730981ce14bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winningParticle: {fileID: 0}
 --- !u!65 &28524714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2481,6 +2482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db62f4139835c04996730981ce14bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winningParticle: {fileID: 0}
 --- !u!1001 &360014797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8296,7 +8298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &543662835
 Transform:
   m_ObjectHideFlags: 0
@@ -9110,6 +9112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db62f4139835c04996730981ce14bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winningParticle: {fileID: 0}
 --- !u!4 &603282607 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4983403615289758, guid: 30279db7b9983d14495f8e5eb978af20, type: 3}
@@ -15637,6 +15640,11 @@ MonoBehaviour:
   fpsCam: {fileID: 92168557}
   thirdPersonCam: {fileID: 1165043958}
   godViewCam: {fileID: 1414485344}
+  timerText: {fileID: 934399482}
+  fastestLapText: {fileID: 1169211738}
+  boardTimer1: {fileID: 1762431737}
+  boardTimer2: {fileID: 88725038}
+  resetSpeedLapTime: 1
 --- !u!4 &935818341
 Transform:
   m_ObjectHideFlags: 0
@@ -15729,8 +15737,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0, y: -0.0011343815, z: -0, w: 0.9999994}
-  m_LocalPosition: {x: 390.667, y: 41.364998, z: 630.56555}
+  m_LocalRotation: {x: 0.078110784, y: -0.001131218, z: 0.0000885759, w: 0.99694407}
+  m_LocalPosition: {x: 390.57993, y: 43.95251, z: 621.38666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29270,12 +29278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c50b3a466dc96a4f9abf18e51150142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winningParticle: {fileID: 1945876832}
-  timerText: {fileID: 934399482}
-  fastestLapText: {fileID: 1169211738}
-  boardTimer1: {fileID: 1762431737}
-  boardTimer2: {fileID: 88725038}
-  resetSpeedLapTime: 0
+  oneLapRace: 0
 --- !u!1 &1637620886 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 761ac6449add9834faf07e845a01ed91, type: 3}
@@ -29676,7 +29679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1685407343
 Transform:
   m_ObjectHideFlags: 0

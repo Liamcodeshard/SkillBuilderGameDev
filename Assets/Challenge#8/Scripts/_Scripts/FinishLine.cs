@@ -9,6 +9,9 @@ public class FinishLine : MonoBehaviour
 
     private bool _running;
 
+    [SerializeField] private ParticleSystem winningParticle;
+
+
     private void Awake() 
     {
       //  _startVisual.SetActive(true);
@@ -35,13 +38,23 @@ public class FinishLine : MonoBehaviour
             //  _startVisual.SetActive(false);
             // _finishedVisual.SetActive(false);
             Crossed?.Invoke(_running);
+            GameManager.racing = true;
         }
         if (col.tag == "Player" && this.tag == "Finish")
         {
             _running = false;
             //  _startVisual.SetActive(false);
             // _finishedVisual.SetActive(false);
+            GameManager.racing = false;
             Crossed?.Invoke(_running);
+            GameManager.racing = false;
+
+            GameManager.instance.CheckAndSetHighScore();
+
+            GameManager.instance.ResetLap();
+
+
+            winningParticle.gameObject.SetActive(true);
         }
     }
 

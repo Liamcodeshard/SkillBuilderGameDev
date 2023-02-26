@@ -19,17 +19,17 @@ public class Gates : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && triggered ==false)
-        {
-                rightGate.material.color = Color.yellow;
-                leftGate.material.color = Color.yellow;
-                TriggerCheckpoint();
-                gateParticles.gameObject.SetActive(true);
-                triggered = true;
+        { 
+            rightGate.material.color = Color.yellow;
+            leftGate.material.color = Color.yellow;
+            //TriggerCheckpoint();
+            gateParticles.gameObject.SetActive(true);
+            triggered = true;
         }
 
     }
     
-    static void TriggerCheckpoint()
+ /*   static void TriggerCheckpoint()
     {
         if(gatesLeft > 0)
         {
@@ -41,5 +41,5 @@ public class Gates : MonoBehaviour
             firstGate = false;
             GameManager.racing = true;
         }
-    }
+ */
 }
