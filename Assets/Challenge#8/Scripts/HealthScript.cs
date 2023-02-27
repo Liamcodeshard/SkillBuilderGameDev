@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class HealthScript : MonoBehaviour
 {
+    [SerializeField] private Transform spawnPoint;
     [SerializeField] private int carHealth = 2;
     public TextMeshProUGUI livesText;
     [SerializeField] public ParticleSystem brokenSmoke;

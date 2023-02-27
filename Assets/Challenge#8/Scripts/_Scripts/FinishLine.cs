@@ -47,13 +47,8 @@ public class FinishLine : MonoBehaviour
             // _finishedVisual.SetActive(false);
             GameManager.racing = false;
             Crossed?.Invoke(_running);
-            GameManager.racing = false;
-
             GameManager.instance.CheckAndSetHighScore();
-
             GameManager.instance.ResetLap();
-
-
             winningParticle.gameObject.SetActive(true);
         }
     }
