@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     {
         CameraSwitcher();
 
+
         CheckAndSetHighScore();
 
 
@@ -57,6 +58,15 @@ public class GameManager : MonoBehaviour
             StartTimer();
         }
         UpdateTimerUI();
+
+        if (!PlayerPrefs.HasKey($"Fastest{SceneManager.GetActiveScene().name}Lap") || PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap") < 1)
+        {
+            PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", 100f);
+        }
+        else if (highScoreLevelOne < PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap"))
+        {
+            PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", highScoreLevelOne);
+        }
     }
 
     private void CameraSwitcher()

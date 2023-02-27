@@ -2482,7 +2482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db62f4139835c04996730981ce14bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winningParticle: {fileID: 0}
+  winningParticle: {fileID: 1945876832}
 --- !u!1001 &360014797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15644,7 +15644,7 @@ MonoBehaviour:
   fastestLapText: {fileID: 1169211738}
   boardTimer1: {fileID: 1762431737}
   boardTimer2: {fileID: 88725038}
-  resetSpeedLapTime: 1
+  resetSpeedLapTime: 0
 --- !u!4 &935818341
 Transform:
   m_ObjectHideFlags: 0
