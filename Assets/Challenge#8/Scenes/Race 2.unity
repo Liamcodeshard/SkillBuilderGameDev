@@ -1034,11 +1034,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!23 &136397229 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23814737659677968, guid: 24373248f391a67468f9995ecb0c840b, type: 3}
-  m_PrefabInstance: {fileID: 2092488825}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &137999916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1303,11 +1298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!23 &235297570 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23814737659677968, guid: 24373248f391a67468f9995ecb0c840b, type: 3}
-  m_PrefabInstance: {fileID: 714277795}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &236905499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8291,7 +8281,6 @@ GameObject:
   - component: {fileID: 543662839}
   - component: {fileID: 543662838}
   - component: {fileID: 543662837}
-  - component: {fileID: 543662836}
   m_Layer: 0
   m_Name: Thing That Does Stuff
   m_TagString: GateBrain
@@ -8314,22 +8303,6 @@ Transform:
   m_Father: {fileID: 906712702}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &543662836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543662834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd504a6b745c174ca6a9ac43eaf0f06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftGate: {fileID: 770770581}
-  rightGate: {fileID: 1987812647}
-  gateParticles: {fileID: 481514062}
-  triggered: 0
 --- !u!65 &543662837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8997,7 +8970,6 @@ GameObject:
   - component: {fileID: 599374253}
   - component: {fileID: 599374252}
   - component: {fileID: 599374251}
-  - component: {fileID: 599374250}
   - component: {fileID: 599374254}
   m_Layer: 0
   m_Name: Thing That Does Stuff
@@ -9021,22 +8993,6 @@ Transform:
   m_Father: {fileID: 282144864}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &599374250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599374248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd504a6b745c174ca6a9ac43eaf0f06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftGate: {fileID: 2123410969}
-  rightGate: {fileID: 1072578201}
-  gateParticles: {fileID: 1585817485}
-  triggered: 0
 --- !u!65 &599374251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10045,11 +10001,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!23 &770770581 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23814737659677968, guid: 24373248f391a67468f9995ecb0c840b, type: 3}
-  m_PrefabInstance: {fileID: 1353905112}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &772637898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1328730529729822, guid: d5fadda3068c73c4188ca488912729dd, type: 3}
@@ -10076,11 +10027,6 @@ MonoBehaviour:
 --- !u!4 &772827136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4927473410539594, guid: 24373248f391a67468f9995ecb0c840b, type: 3}
-  m_PrefabInstance: {fileID: 1867659565}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &772827138 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23814737659677968, guid: 24373248f391a67468f9995ecb0c840b, type: 3}
   m_PrefabInstance: {fileID: 1867659565}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &789118800
@@ -15738,7 +15684,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.078110784, y: -0.001131218, z: 0.0000885759, w: 0.99694407}
-  m_LocalPosition: {x: 390.57993, y: 43.95251, z: 621.38666}
+  m_LocalPosition: {x: 390.57684, y: 43.95251, z: 621.3866}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16463,11 +16409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!23 &1072578201 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23814737659677968, guid: 24373248f391a67468f9995ecb0c840b, type: 3}
-  m_PrefabInstance: {fileID: 2127852547}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1080580955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16901,7 +16842,6 @@ GameObject:
   - component: {fileID: 1110131277}
   - component: {fileID: 1110131276}
   - component: {fileID: 1110131275}
-  - component: {fileID: 1110131274}
   m_Layer: 0
   m_Name: Thing That Does Stuff
   m_TagString: GateBrain
@@ -16924,22 +16864,6 @@ Transform:
   m_Father: {fileID: 1662256776}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1110131274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110131272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd504a6b745c174ca6a9ac43eaf0f06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftGate: {fileID: 772827138}
-  rightGate: {fileID: 2113981739}
-  gateParticles: {fileID: 1416305254}
-  triggered: 0
 --- !u!65 &1110131275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29672,7 +29596,6 @@ GameObject:
   - component: {fileID: 1685407346}
   - component: {fileID: 1685407345}
   - component: {fileID: 1685407348}
-  - component: {fileID: 1685407344}
   m_Layer: 0
   m_Name: Thing That Does Stuff
   m_TagString: GateBrain
@@ -29695,22 +29618,6 @@ Transform:
   m_Father: {fileID: 334139141}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1685407344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685407342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd504a6b745c174ca6a9ac43eaf0f06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftGate: {fileID: 136397229}
-  rightGate: {fileID: 235297570}
-  gateParticles: {fileID: 789118801}
-  triggered: 0
 --- !u!65 &1685407345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36881,11 +36788,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!23 &1987812647 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23814737659677968, guid: 24373248f391a67468f9995ecb0c840b, type: 3}
-  m_PrefabInstance: {fileID: 1428192171}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1994153516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37700,11 +37602,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4927473410539594, guid: 24373248f391a67468f9995ecb0c840b, type: 3}
   m_PrefabInstance: {fileID: 1231514299}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &2113981739 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23814737659677968, guid: 24373248f391a67468f9995ecb0c840b, type: 3}
-  m_PrefabInstance: {fileID: 1231514299}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2113981742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37741,11 +37638,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!23 &2123410969 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23814737659677968, guid: 24373248f391a67468f9995ecb0c840b, type: 3}
-  m_PrefabInstance: {fileID: 287153032}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2127852547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37924,7 +37816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5334579497190683082, guid: 09055d493187e7d4fa92edb3c6027635, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5581137
+      value: 0.55503124
       objectReference: {fileID: 0}
     - target: {fileID: 5334579497190683082, guid: 09055d493187e7d4fa92edb3c6027635, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37932,7 +37824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5334579497190683082, guid: 09055d493187e7d4fa92edb3c6027635, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.614634
+      value: -9.614687
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09055d493187e7d4fa92edb3c6027635, type: 3}

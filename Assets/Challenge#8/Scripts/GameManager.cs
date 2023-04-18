@@ -45,28 +45,21 @@ public class GameManager : MonoBehaviour
     {
         CameraSwitcher();
 
-
-        CheckAndSetHighScore();
-
-
         highScoreLevelOne = timer;
         timerText.text = highScoreLevelOne.ToString("0.00");
 
 
-        if (GameManager.racing == true)
+        if (GameManager.racing)
         {
             StartTimer();
         }
+        else if(!GameManager.racing)
+        {
+            ResetRace();
+        }
+
         UpdateTimerUI();
 
-        if (!PlayerPrefs.HasKey($"Fastest{SceneManager.GetActiveScene().name}Lap") || PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap") < 1)
-        {
-            PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", 100f);
-        }
-        else if (highScoreLevelOne < PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap"))
-        {
-            PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", highScoreLevelOne);
-        }
     }
 
     private void CameraSwitcher()
@@ -101,15 +94,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    // ran by the FinishLine  script
     public void CheckAndSetHighScore()
     {
-
+        print("Checking");
         if (highScoreLevelOne < PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap"))
         {
             PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", highScoreLevelOne);
         }
-
 
         fastestLapText.text = "Speed Lap : " + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
 
@@ -133,15 +125,14 @@ public class GameManager : MonoBehaviour
         timerText.text = "LapTime: " + timer.ToString("0.00");
         fastestLapText.text = "Speed Lap : " + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
 
-        if (boardTimer1 != null && boardTimer2 != null)
+        if (boardTimer1 != null)
         {
             boardTimer1.text = timer.ToString("0.00");
+        }
+        if (boardTimer2 != null)
+        {
             boardTimer2.text = timer.ToString("0.00");
         }
-
-
-
-
     }
 
 

@@ -12325,7 +12325,7 @@ GameObject:
   - component: {fileID: 699424604}
   - component: {fileID: 699424603}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Pausebuttontext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14847,7 +14847,7 @@ GameObject:
   - component: {fileID: 934399483}
   - component: {fileID: 934399482}
   m_Layer: 5
-  m_Name: Timer
+  m_Name: TimerText
   m_TagString: Time
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15041,6 +15041,11 @@ MonoBehaviour:
   fpsCam: {fileID: 1739188468}
   thirdPersonCam: {fileID: 1496920281}
   godViewCam: {fileID: 1414485344}
+  timerText: {fileID: 934399482}
+  fastestLapText: {fileID: 1169211738}
+  boardTimer1: {fileID: 123492014}
+  boardTimer2: {fileID: 123492014}
+  resetSpeedLapTime: 0
 --- !u!4 &935818341
 Transform:
   m_ObjectHideFlags: 0
@@ -15488,7 +15493,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.07811105, y: -0, z: -0, w: 0.99694467}
-  m_LocalPosition: {x: 41.3581, y: 4.2225194, z: 23.665321}
+  m_LocalPosition: {x: 41.355015, y: 4.2225194, z: 23.665321}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47192,12 +47197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c50b3a466dc96a4f9abf18e51150142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winningParticle: {fileID: 1945876832}
-  timerText: {fileID: 934399482}
-  fastestLapText: {fileID: 1169211738}
-  boardTimer1: {fileID: 123492014}
-  boardTimer2: {fileID: 123492014}
-  resetSpeedLapTime: 0
+  oneLapRace: 0
 --- !u!1001 &1635531421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48402,7 +48402,7 @@ GameObject:
   - component: {fileID: 1704947705}
   - component: {fileID: 1704947704}
   m_Layer: 5
-  m_Name: Health
+  m_Name: HealthText
   m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57987,7 +57987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1496920278, guid: 79004f8777d25344d9c78287c5173943, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.55810165
+      value: 0.55501556
       objectReference: {fileID: 0}
     - target: {fileID: 1739188464, guid: 79004f8777d25344d9c78287c5173943, type: 3}
       propertyPath: m_IsActive
