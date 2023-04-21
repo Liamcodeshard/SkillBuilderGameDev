@@ -4,23 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Block
-  - Gem
-  - GateBrain
-  - BrokenSmoke
-  - Start
-  - Health
-  - Time
+  - chk
+  - PlayerCar
+  - AICarCollider
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Turbo
+  - 
   - Water
   - UI
-  - Foreground
-  - Block
   - 
+  - 
+  - Car
   - 
   - 
   - 
