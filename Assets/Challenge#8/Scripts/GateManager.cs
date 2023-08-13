@@ -14,13 +14,12 @@ public class GateManager : MonoBehaviour
 
     void Start()
     {
-        /*
+       
         gateBrains = GameObject.FindGameObjectsWithTag("GateBrain");
         Gates.gatesLeft = gateBrains.Length;
-       // PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", 100f);
-        */
-
-    }
+        print(Gates.gatesLeft);
+        print(gateBrains.Length);
+     }
 
     // Update is called once per frame
     void Update()

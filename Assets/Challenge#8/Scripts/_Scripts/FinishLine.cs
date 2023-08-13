@@ -35,20 +35,21 @@ public class FinishLine : MonoBehaviour
         if (col.tag == "Player" && this.tag == "Start")
         {
             _running = true;
-            //  _startVisual.SetActive(false);
-            // _finishedVisual.SetActive(false);
             Crossed?.Invoke(_running);
             GameManager.racing = true;
         }
         if (col.tag == "Player" && this.tag == "Finish")
         {
             _running = false;
-            //  _startVisual.SetActive(false);
-            // _finishedVisual.SetActive(false);
             GameManager.racing = false;
             Crossed?.Invoke(_running);
+           // GameManager.racing = false;
+
             GameManager.instance.CheckAndSetHighScore();
+
             GameManager.instance.ResetLap();
+
+
             winningParticle.gameObject.SetActive(true);
         }
     }

@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
         instance = this;
         ResetRace();
         CheckAndSetPlayerPrefs();
+        if (resetSpeedLapTime) PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", 100f);
+        print(PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap"));
+
     }
 
     // Update is called once per frame
@@ -42,12 +45,20 @@ public class GameManager : MonoBehaviour
     {
         CameraSwitcher();
 
-        if (GameManager.racing == true)
+        highScoreLevelOne = timer;
+        timerText.text = highScoreLevelOne.ToString("0.00");
+
+
+        if (GameManager.racing)
         {
             StartTimer();
         }
-        UpdateTimerUI();
+        else if(!GameManager.racing)
+        {
+            ResetRace();
+        }
 
+        UpdateTimerUI();
 
     }
 
@@ -70,12 +81,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void TakeLapTimeForChecking()
-    {
-
-        highScoreLevelOne = timer;
-    }
-
     public static void StartTimer()
     {
         timer += Time.deltaTime;
@@ -83,23 +88,20 @@ public class GameManager : MonoBehaviour
 
     public void CheckAndSetPlayerPrefs()
     {
-        if (!PlayerPrefs.HasKey($"Fastest{SceneManager.GetActiveScene().name}Lap") || PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap") < 1 || resetSpeedLapTime)
+        if (!PlayerPrefs.HasKey($"Fastest{SceneManager.GetActiveScene().name}Lap") || PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap") < 1)
         {
             PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", 100f);
         }
     }
 
-
+    // ran by the FinishLine  script
     public void CheckAndSetHighScore()
     {
-        highScoreLevelOne = timer;
-
+        print("Checking");
         if (highScoreLevelOne < PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap"))
         {
- 
             PlayerPrefs.SetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap", highScoreLevelOne);
         }
-
 
         fastestLapText.text = "Speed Lap : " + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
 
@@ -120,15 +122,15 @@ public class GameManager : MonoBehaviour
     }
     void UpdateTimerUI()
     {
-
         timerText.text = "LapTime: " + timer.ToString("0.00");
         fastestLapText.text = "Speed Lap : " + PlayerPrefs.GetFloat($"Fastest{SceneManager.GetActiveScene().name}Lap").ToString("0.00");
 
-      //  timerText.text = highScoreLevelOne.ToString("0.00");
-
-        if (boardTimer1 != null && boardTimer2 != null)
+        if (boardTimer1 != null)
         {
             boardTimer1.text = timer.ToString("0.00");
+        }
+        if (boardTimer2 != null)
+        {
             boardTimer2.text = timer.ToString("0.00");
         }
     }
