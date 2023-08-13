@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarController : MonoBehaviour
+public class CarController2 : MonoBehaviour
 {
     [SerializeField] Rigidbody sphereRigidbody;
     [SerializeField] public float forwardSpeed;

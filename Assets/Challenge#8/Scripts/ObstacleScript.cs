@@ -6,11 +6,11 @@ using UnityEngine;
 public class ObstacleScript : MonoBehaviour
 {
     [SerializeField] private int damage = 1;
-    private CarController carControllerScript;
+    //private CarController carControllerScript;
 
     void Start()
     {
-        carControllerScript = GameObject.FindObjectOfType<CarController>();
+     //   carControllerScript = GameObject.FindObjectOfType<CarController>();
     }
 
     void OnCollisionEnter(Collision col)
@@ -20,7 +20,7 @@ public class ObstacleScript : MonoBehaviour
             col.gameObject.GetComponent<HealthScript>().brokenSmoke.gameObject.SetActive(true);
             col.gameObject.GetComponent<HealthScript>().TakeHealth(damage);
             CinemachineShaker.Instance.ShakeCamera(2, .2f);
-            carControllerScript.SlowCar();
+           // carControllerScript.SlowCar();
         }
     }
 }
